@@ -15,19 +15,20 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 SRC = Path("src/index.html")    # relative — required by respec --localhost
 OUT = Path("dist/index.html")   # relative — required by respec --localhost
-DEFAULT_TIMEOUT_MS = "30000"
+DEFAULT_TIMEOUT_SECONDS = "60"
 
 
 def main() -> None:
     (REPO_ROOT / OUT).parent.mkdir(parents=True, exist_ok=True)
 
-    timeout_ms = os.getenv("RESPEC_TIMEOUT_MS", DEFAULT_TIMEOUT_MS)
+    timeout_seconds = os.getenv("RESPEC_TIMEOUT_SECONDS", DEFAULT_TIMEOUT_SECONDS)
     runner = ["respec"] if shutil.which("respec") else ["npx", "respec"]
     cmd = [
         *runner,
         "--localhost",
+        "--use-local",
         "--timeout",
-        timeout_ms,
+        timeout_seconds,
         "-s",
         str(SRC),
         "-o",
