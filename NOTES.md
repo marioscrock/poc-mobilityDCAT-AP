@@ -48,7 +48,7 @@ Date: 2026-09-16
 |------|------------------------------|-----------------------|
 | Canonical URL | `canonicalURI` | `https://w3id.org/mobilitydcat-ap/releases/X.Y.Z` |
 | Document identifier (`id`) | Derived from `canonicalURI` in ReSpec JSON-LD output | `https://w3id.org/mobilitydcat-ap/releases/X.Y.Z` |
-| Document type and recommendation labeling | `specStatus` (and related ReSpec status behavior) | Recommendation-oriented output for release |
+| Document type and recommendation labeling | `specStatus` (and related ReSpec status behavior) | `ED` |
 | Publication date (`datePublished`, `publishDate`, `publishISODate`) | `publishDate` | `YYYY-MM-DD` and `YYYY-MM-DDT00:00:00.000Z` |
 | Generated subtitle and visible publication label | `specStatus` + `publishDate` | `Recommendation DD Month YYYY` |
 | Release URL metadata links | `latestVersion`, `thisVersionURI`, `prevVersionURI`, `latestVersionURI`, `prevRecURI`, `edDraftURI` | Values aligned with current `X.Y.Z` release |
@@ -61,6 +61,30 @@ Notes for this table:
 - Values above are release-specific and should be reviewed for every `X.Y.Z`.
 - For configurable fields, document only the `src/config.js` update path.
 - Non-config checks remain part of release verification, e.g. confirming `releases/index.html` and `releases/X.Y.Z/index.html` are identical.
+
+### Draft vs release config.js checklist (to document)
+
+- Add a dedicated checklist showing which `src/config.js` values must be set when creating:
+	- a new draft publication;
+	- a new release publication.
+- Include at least these keys in the draft vs release comparison:
+	- `specStatus`
+	- `publishDate`
+	- `canonicalURI`
+	- `latestVersion`
+	- `thisVersionURI`
+	- `prevVersionURI`
+	- `latestVersionURI`
+	- `prevRecURI`
+	- `edDraftURI`
+	- `otherLinks` (`Document status`, `Document version`, optional `Reviewed by`, `Approved by`)
+	- `copyrightHolder` / `copyrightURL`
+
+### HTML-only text items to verify with Peter
+
+- Some wording may still need direct HTML-level adjustment after build (depending on ReSpec templates and policy wording).
+- Add a review checkpoint with Peter to confirm exactly which statements, if any, must be edited in exported HTML instead of being controlled in `src/config.js`.
+- Record the outcome as a stable rule for future releases/drafts.
 
 ## 6) Presentation of refactoring objectives
 
@@ -94,3 +118,21 @@ Notes for this table:
 	- Validate examples in `src/examples/` against shapes in `src/shaclShapes/`.
 	- Integrate as an optional dev command (for local quality checks).
 	- Optionally wire it into CI later, after local workflow is stable.
+
+## 9) Agent instructions interoperability
+
+- Evaluate removing `CLAUDE.md` in favor of a more generic `agent.md`-style guidance file for broader tool interoperability.
+- Define a neutral structure that can be consumed by different coding agents, not tied to a single vendor/tool.
+- Ensure any migration keeps the same essential project context (repository structure, build flow, workflow conventions, and release process).
+- Add a transition note in documentation so contributors know which instruction file is canonical.
+
+## 10) Reorganize DEVELOPMENT.md by task
+
+- Rework `DEVELOPMENT.md` so it is organized by user tasks/workflows instead of tool-only sections.
+- Add task-oriented sections, for example:
+	- Update or publish a draft.
+	- Create and publish a new release.
+	- Promote a release to latest.
+	- Run local validation and troubleshooting.
+- For each task, include prerequisites, exact commands, expected outputs, and verification checks.
+- Add quick links between `DEVELOPMENT.md`, `README.md`, and workflow names to reduce onboarding friction.
