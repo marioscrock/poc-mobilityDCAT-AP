@@ -1,0 +1,50 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mobilitydcatap: <https://w3id.org/mobilitydcat-ap#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://trafficdata.se/> a dcat:Catalog ;
+  dcterms:description "The portal Trafficdata.se is a national service in which we gather information on, and provide you with access to, traffic and road network data."@en ;
+  dcterms:publisher <https://www.trafikverket.se/> ;
+  dcterms:spatial [ a dcterms:Location ;
+      dcterms:identifier <http://publications.europa.eu/resource/authority/country/SWE> ] ;
+  dcterms:title "Trafficdata.se"@en ;
+  dcat:dataset <https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> ;
+  dcat:record <https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits> ;
+  foaf:homepage <https://trafficdata.se/> .
+
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d> a dcat:Distribution ;
+  dcterms:format <http://publications.europa.eu/resource/authority/file-type/XML> ;
+  dcterms:rights [ a dcterms:RightsStatement ;
+      dcterms:type <https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided> ] ;
+  dcat:accessURL <http://www.trafikverket.se/tjanster/Oppna_data/trafikinformation-i-realtid/Trafikinformation-vag-i-realtid/Sa-har-far-du-tillgang-till-data-for-trafikinformation-i-realtid/> ;
+  mobilitydcatap:mobilityDataStandard [ a mobilitydcatap:MobilityDataStandard ;
+      dcterms:conformsTo <https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II> ;
+      dcat:version "3.2" ] .
+
+<https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits> a dcat:CatalogRecord ;
+  dcterms:created "2019-12-04"^^xsd:date ;
+  dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+  dcterms:modified "2019-12-04"^^xsd:date ;
+  foaf:primaryTopic <https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> .
+
+<https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b> a foaf:Agent ;
+  foaf:mbox <mailto:datex@trafikverket.se> ;
+  foaf:name "Trafikverket"@sv ;
+  foaf:workplaceHomepage <https://www.trafikverket.se> .
+
+<https://www.trafikverket.se/> a foaf:Agent ;
+  foaf:name "Trafikverket"@sv .
+
+<https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa> a dcat:Dataset ;
+  dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT> ;
+  dcterms:description "Traffic signs expressing traffic regulations and identifying dangers from the Swedish Transport Administration. Datex II format."@en ;
+  dcterms:publisher <https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b> ;
+  dcterms:spatial [ a dcterms:Location ;
+      dcterms:identifier <http://publications.europa.eu/resource/authority/country/SWE> ] ;
+  dcterms:title "Traffic signs expressing traffic regulations and identifying dangers, Speed limits"@en ;
+  dcat:distribution <https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d> ;
+  mobilitydcatap:mobilityTheme <https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-speed-limits>,
+    <https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-traffic-signs-and-regulations> .
+
