@@ -31,7 +31,7 @@
     <rdfs:comment xml:lang="en">This property MAY be used to specify the affiliation of the Kind. This property can be repeated for different versions of the name (e.g. the name in different languages) - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. </rdfs:comment>
     <rdfs:label xml:lang="en">affiliation</rdfs:label>
     <vs:term_status>stable</vs:term_status>
-    <skos:scopeNote xml:lang="en">In mobilityDCAT-AP TEST, this is an optional property to be used for Kind.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In mobilityDCAT-AP TEST 2, this is an optional property to be used for Kind.</skos:scopeNote>
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     <dcam:domainIncludes rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
     <dcam:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
