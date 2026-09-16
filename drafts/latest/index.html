@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en-GB"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 37.0.0">
+<meta name="generator" content="ReSpec 37.3.6">
 <style>
 dfn{cursor:pointer}
 .dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
@@ -56,7 +56,7 @@ a[href].orcid>svg{margin-bottom:-2px}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
 #issue-summary>ul{column-count:2}
-#issue-summary li{list-style:none;display:inline-block}
+#issue-summary li{list-style:none}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
 details.respec-tests-details>*{padding-right:2em}
 details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
@@ -66,11 +66,11 @@ details.respec-tests-details>li{padding-left:1em}
 .self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 aside.example .marker>a.self-link{color:inherit}
 .header-wrapper{display:flex;align-items:baseline}
-:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2):has(+a.self-link){position:relative;left:-.5em}
-:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
-:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3,h4,h5,h6):not(:where(#toc>h2,#abstract>h2,#sotd>h2,.head>h2)):has(+a.self-link){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(:where(#toch2))+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.8;text-decoration:none}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§"}
 :is(h2,h3)+a.self-link{top:-.2em}
-:is(h4,h5,h6)+a.self-link::before{color:#000}
+:is(h2,h3)+a.self-link::before{color:var(--heading-text)}
 @media (max-width:767px){
 dd{margin-left:0}
 }
@@ -112,14 +112,15 @@ body:has(input[name=color-scheme][value=dark]:checked){color-scheme:dark}
 </style>
 
 <meta name="color-scheme" content="light">
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/dark.css" disabled="">
 <meta name="description" content="mobilityDCAT-AP is a mobility-related extension of the DCAT application profile for data portals in Europe DCAT-AP v3.0.0. 
   It allows for a structured, interoperable and harmonised way to describe and exchange metadata about data platforms and datasets with a mobility relevance.">
 <link rel="canonical" href="https://w3id.org/mobilitydcat-ap/drafts/latest/">
 <script type="application/ld+json">{
   "@context": [
-    "http://schema.org",
+    "https://schema.org",
     {
-      "@vocab": "http://schema.org/",
+      "@vocab": "https://schema.org/",
       "@language": "en-GB",
       "w3p": "http://www.w3.org/2001/02pd/rec54#",
       "foaf": "http://xmlns.com/foaf/0.1/",
@@ -297,10 +298,10 @@ body:has(input[name=color-scheme][value=dark]:checked){color-scheme:dark}
       }
     },
     {
-      "id": "http://xmlns.com/foaf/spec",
+      "id": "http://xmlns.com/foaf/spec/",
       "type": "TechArticle",
       "name": "FOAF Vocabulary Specification 0.99 (Paddington Edition)",
-      "url": "http://xmlns.com/foaf/spec",
+      "url": "http://xmlns.com/foaf/spec/",
       "creator": [
         {
           "name": "Dan Brickley"
@@ -569,16 +570,16 @@ body:has(input[name=color-scheme][value=dark]:checked){color-scheme:dark}
       }
     },
     {
-      "id": "https://www.rfc-editor.org/rfc/rfc5646",
+      "id": "https://www.rfc-editor.org/info/bcp47",
       "type": "TechArticle",
       "name": "Tags for Identifying Languages",
-      "url": "https://www.rfc-editor.org/rfc/rfc5646",
+      "url": "https://www.rfc-editor.org/info/bcp47",
       "creator": [
         {
-          "name": "A. Phillips, Ed."
+          "name": "Addison Phillips"
         },
         {
-          "name": "M. Davis, Ed."
+          "name": "Mark Davis"
         }
       ],
       "publisher": {
@@ -586,10 +587,10 @@ body:has(input[name=color-scheme][value=dark]:checked){color-scheme:dark}
       }
     },
     {
-      "id": "https://www.rfc-editor.org/rfc/rfc6497",
+      "id": "https://www.rfc-editor.org/info/rfc6497/",
       "type": "TechArticle",
       "name": "BCP 47 Extension T - Transformed Content",
-      "url": "https://www.rfc-editor.org/rfc/rfc6497",
+      "url": "https://www.rfc-editor.org/info/rfc6497/",
       "creator": [
         {
           "name": "M. Davis"
@@ -642,51 +643,6 @@ body:has(input[name=color-scheme][value=dark]:checked){color-scheme:dark}
     }
   ]
 }</script>
-<style>
-.hljs,body:has(input[name=color-scheme][value=light]:checked) .hljs,head:not(:has(meta[name=color-scheme][content~=dark]))+body .hljs{--base:#fafafa;--mono-1:#383a42;--mono-2:#686b77;--mono-3:#717277;--hue-1:#0b76c5;--hue-2:#336ae3;--hue-3:#a626a4;--hue-4:#42803c;--hue-5:#ca4706;--hue-5-2:#c91243;--hue-6:#986801;--hue-6-2:#9a6a01}
-@media (prefers-color-scheme:dark){
-.hljs{
-  --base: #282c34;
-  --mono-1: #abb2bf;
-  --mono-2: #818896;
-  --mono-3: #5c6370;
-  --hue-1: #56b6c2;
-  --hue-2: #61aeee;
-  --hue-3: #c678dd;
-  --hue-4: #98c379;
-  --hue-5: #e06c75;
-  --hue-5-2: #be5046;
-  --hue-6: #d19a66;
-  --hue-6-2: #e6c07b;
-}
-}
-body:has(input[name=color-scheme][value=dark]:checked) .hljs{
-  --base: #282c34;
-  --mono-1: #abb2bf;
-  --mono-2: #818896;
-  --mono-3: #5c6370;
-  --hue-1: #56b6c2;
-  --hue-2: #61aeee;
-  --hue-3: #c678dd;
-  --hue-4: #98c379;
-  --hue-5: #e06c75;
-  --hue-5-2: #be5046;
-  --hue-6: #d19a66;
-  --hue-6-2: #e6c07b;
-}
-.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;color:var(--mono-1,#383a42);background:#fafafa;background:var(--base,#fafafa)}
-.hljs-comment,.hljs-quote{color:#717277;color:var(--mono-3,#717277);font-style:italic}
-.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4;color:var(--hue-3,#a626a4)}
-.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;color:var(--hue-5,#ca4706);font-weight:700}
-.hljs-literal{color:#0b76c5;color:var(--hue-1,#0b76c5)}
-.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c;color:var(--hue-4,#42803c)}
-.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01;color:var(--hue-6-2,#9a6a01)}
-.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801;color:var(--hue-6,#986801)}
-.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3;color:var(--hue-2,#336ae3)}
-.hljs-emphasis{font-style:italic}
-.hljs-strong{font-weight:700}
-.hljs-link{text-decoration:underline}
-</style>
 <style>
 var:hover{text-decoration:underline;cursor:pointer}
 var.respec-hl{color:var(--color,#000);background-color:var(--bg-color);box-shadow:0 0 0 2px var(--bg-color)}
@@ -1545,20 +1501,20 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <dl>
         
         <dt>Latest published version:</dt><dd>
-                <a href="https://w3id.org/mobilitydcat-ap/drafts/latest/">https://w3id.org/mobilitydcat-ap/drafts/latest/</a>
-              </dd>
+                  <a href="https://w3id.org/mobilitydcat-ap/drafts/latest/">https://w3id.org/mobilitydcat-ap/drafts/latest/</a>
+                </dd>
         <dt>Latest editor's draft:</dt><dd><a href="https://w3id.org/mobilitydcat-ap/drafts/latest/">https://w3id.org/mobilitydcat-ap/drafts/latest/</a></dd>
         <dt>History:</dt><dd>
-                    <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/commits/">Commit history</a>
-                  </dd>
+                        <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/commits/">Commit history</a>
+                      </dd>
         
         
         
         
         <dt>Latest Recommendation:</dt><dd><a href="https://w3id.org/mobilitydcat-ap/releases/1.1.0/">https://w3id.org/mobilitydcat-ap/releases/1.1.0/</a></dd>
         <dt>
-                Editors:
-              </dt><dd class="editor p-author h-card vcard">
+                  Editors:
+                </dt><dd class="editor p-author h-card vcard">
     <span class="p-name fn">Daham Mohammed Mustafa</span><a class="p-name orcid" href="https://orcid.org/0000-0003-1867-4428"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
     <style>
 
@@ -1609,8 +1565,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </dd>
         
         <dt>
-                Author:
-              </dt><dd class="editor p-author h-card vcard">
+                  Author:
+                </dt><dd class="editor p-author h-card vcard">
     <a class="u-url url p-name fn" href="https://github.com/mobilityDCAT-AP/">NAPCORE Sub-Working Group (SWG) 4.4</a> (<a class="p-org org h-org" href="https://napcore.eu/">NAPCORE (National Access Point Coordination Organisation for Europe) Organization</a>)
   </dd>
         <dt>Feedback:</dt><dd>
@@ -1629,15 +1585,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </details>
     
     <p>
-          This document is also available in these non-normative formats:
-          <a rel="alternate" href="./mobilitydcat-ap.rdf">RDF/XML</a>, <a rel="alternate" href="./mobilitydcat-ap.ttl">Turtle</a>, <a rel="alternate" href="./mobilitydcat-ap.jsonld">JSON-LD</a>, <a rel="alternate" href="./shaclShapes/mobilitydcat-ap-shacl.ttl">SHACL basic validation (Turtle)</a> and <a rel="alternate" href="./shaclShapes/mobilitydcat-ap-shacl-ranges.ttl">SHACL range constraints (Turtle)</a>
-        </p>
+            This document is also available in these non-normative formats:
+            <a rel="alternate" href="./mobilitydcat-ap.rdf">RDF/XML</a>, <a rel="alternate" href="./mobilitydcat-ap.ttl">Turtle</a>, <a rel="alternate" href="./mobilitydcat-ap.jsonld">JSON-LD</a>, <a rel="alternate" href="./shaclShapes/mobilitydcat-ap-shacl.ttl">SHACL basic validation (Turtle)</a> and <a rel="alternate" href="./shaclShapes/mobilitydcat-ap-shacl-ranges.ttl">SHACL range constraints (Turtle)</a>
+          </p>
     <p class="copyright">
       Copyright ©
       2023-2025
       the document editors/authors.
       Text is available under the
-            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International Public License</a>; additional terms may apply.
+              <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International Public License</a>; additional terms may apply.
     </p>
     <hr title="Separator for header">
   </div>
@@ -5447,17 +5403,7 @@ geoDCAT-AP: <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/#Locati
 
 
 
-
-
-
-<meta charset="utf-8">
-<title>Error</title>
-
-
-<pre aria-busy="false"><code class="hljs css">Cannot GET /<span class="hljs-attribute">src</span>/tables/class-mobility-data-standard</code></pre>
-
-
-
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-mobility-data-standard" data-include-id="include-5216431028320188" class="respec-offending-element" title="`data-include` failed: `./tables/class-mobility-data-standard` (Fetching `./tables/class-mobility-data-standard` failed with status code 404 (Not Found).). Please check that the URL is correct and reachable." id="respec-offender-data-include-failed-tables-class-mobility-data-standard-fetching-tables-class-mobility-data-standard-failed-with-status-code-404-not-found-please-check-that-the-url-is-correct-and-reachable"></div>
 
 <table class="simple" id="table-properties-for-mobility-data-standard">
 <thead>
@@ -9799,7 +9745,7 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
     </dd><dt id="bib-eu-eip-cmc">[EU-EIP-CMC]</dt><dd>
       <a href="https://www.its-platform.eu/achievement/monitoring-harmonisation-of-naps/"><cite>Information about the Coordinated Metadata Catalogue (CMC) by EU EIP</cite></a>.  EU EIP Consortium. URL: <a href="https://www.its-platform.eu/achievement/monitoring-harmonisation-of-naps/">https://www.its-platform.eu/achievement/monitoring-harmonisation-of-naps/</a>
     </dd><dt id="bib-foaf">[FOAF]</dt><dd>
-      <a href="http://xmlns.com/foaf/spec"><cite>FOAF Vocabulary Specification 0.99 (Paddington Edition)</cite></a>. Dan Brickley; Libby Miller.  FOAF project. 14 January 2014. URL: <a href="http://xmlns.com/foaf/spec">http://xmlns.com/foaf/spec</a>
+      <a href="http://xmlns.com/foaf/spec/"><cite>FOAF Vocabulary Specification 0.99 (Paddington Edition)</cite></a>. Dan Brickley; Libby Miller.  FOAF project. 14 January 2014. URL: <a href="http://xmlns.com/foaf/spec/">http://xmlns.com/foaf/spec/</a>
     </dd><dt id="bib-geodcat-ap-v2-0-0">[GEODCAT-AP-v2.0.0]</dt><dd>
       <a href="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/"><cite>GeoDCAT-AP - Version 2.0.0</cite></a>.  European Commission. 23 December 2020. URL: <a href="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/">https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/</a>
     </dd><dt id="bib-iana-charsets">[IANA-CHARSETS]</dt><dd>
@@ -9838,7 +9784,7 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
   </section><section id="informative-references"><div class="header-wrapper"><h3 id="j-2-informative-references"><bdi class="secno">J.2 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix J.2"></a></div>
     
     <dl class="bibliography"><dt id="bib-bcp47">[BCP47]</dt><dd>
-      <a href="https://www.rfc-editor.org/rfc/rfc5646"><cite>Tags for Identifying Languages</cite></a>. A. Phillips, Ed.; M. Davis, Ed. IETF. September 2009. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc5646">https://www.rfc-editor.org/rfc/rfc5646</a>
+      <a href="https://www.rfc-editor.org/info/bcp47"><cite>Tags for Identifying Languages</cite></a>. Addison Phillips; Mark Davis.  IETF. September 2009. Best Current Practice. URL: <a href="https://www.rfc-editor.org/info/bcp47">https://www.rfc-editor.org/info/bcp47</a>
     </dd><dt id="bib-cldr">[CLDR]</dt><dd>
       <a href="http://unicode.org/cldr/trac/browser/trunk/common/bcp47/transform_mt.xml"><cite>CLDR - Unicode Common Locale Data Repository. BCP47, transform_mt.xml</cite></a>.  UNICODE Consortium. URL: <a href="http://unicode.org/cldr/trac/browser/trunk/common/bcp47/transform_mt.xml">http://unicode.org/cldr/trac/browser/trunk/common/bcp47/transform_mt.xml</a>
     </dd><dt id="bib-conneg">[CONNEG]</dt><dd>
@@ -9848,7 +9794,7 @@ These classes have been already defined in <a href="https://semiceu.github.io/DC
     </dd><dt id="bib-iso-639">[ISO-639]</dt><dd>
       <a href="https://www.iso.org/standard/4766.html"><cite>Code for the representation of names of languages</cite></a>. ISO/TC 37/SC 2.  ISO. 1988. International Standard. URL: <a href="https://www.iso.org/standard/4766.html">https://www.iso.org/standard/4766.html</a>
     </dd><dt id="bib-rfc6497">[RFC6497]</dt><dd>
-      <a href="https://www.rfc-editor.org/rfc/rfc6497"><cite>BCP 47 Extension T - Transformed Content</cite></a>. M. Davis; A. Phillips; Y. Umaoka; C. Falk.  IETF. February 2012. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc6497">https://www.rfc-editor.org/rfc/rfc6497</a>
+      <a href="https://www.rfc-editor.org/info/rfc6497/"><cite>BCP 47 Extension T - Transformed Content</cite></a>. M. Davis; A. Phillips; Y. Umaoka; C. Falk.  IETF. February 2012. Informational. URL: <a href="https://www.rfc-editor.org/info/rfc6497/">https://www.rfc-editor.org/info/rfc6497/</a>
     </dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
@@ -9909,7 +9855,7 @@ function getHighlightColor(target) {
   if (HL_COLORS.get("respec-hl-c1") === true) return "respec-hl-c1";
 
   // otherwise get some other available color
-  return HL_COLORS.keys().find(c => HL_COLORS.get(c)) || "respec-hl-c1";
+  return [...HL_COLORS.keys()].find(c => HL_COLORS.get(c)) || "respec-hl-c1";
 }
 
 /**

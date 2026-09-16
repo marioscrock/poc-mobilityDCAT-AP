@@ -278,7 +278,7 @@ skos:prefLabel a owl:DatatypeProperty ;
   dcam:rangeIncludes rdfs:Literal ;
   rdfs:comment "This property MAY be used to specify the affiliation of the Kind. This property can be repeated for different versions of the name (e.g. the name in different languages) - see § 8. Accessibility and Multilingual Aspects. This property is analogue to an addition by [GEODCAT-AP-v2.0.0]. "@en ;
   vs:term_status "stable" ;
-  skos:scopeNote "In mobilityDCAT-AP, this is an optional property to be used for Kind."@en ;
+  skos:scopeNote "In mobilityDCAT-AP TEST 2, this is an optional property to be used for Kind."@en ;
   adms:status <http://publications.europa.eu/resource/dataset/concept-status/CURRENT> .
 
 <http://www.w3.org/2011/content#characterEncoding> a owl:DatatypeProperty ;
@@ -851,10 +851,11 @@ skos:Concept skos:scopeNote "A category of a dataset, i.e. a specific subject, t
       dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.jsonld> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/application/ld+json> ],
     [ a adms:AssetDistribution ;
-      dcterms:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
-      dcterms:title "HTML"@en ;
-      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/> ;
-      dcat:mediaType "text/html"^^dcterms:IMT ],
+      dcterms:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML>,
+        <http://www.w3.org/ns/formats/data/RDF_XML> ;
+      dcterms:title "RDF/XML"@en ;
+      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.rdf> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/application/rdf+xml> ],
     [ a adms:AssetDistribution ;
       dcterms:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
         <http://www.w3.org/ns/formats/data/Turtle> ;
@@ -862,10 +863,9 @@ skos:Concept skos:scopeNote "A category of a dataset, i.e. a specific subject, t
       dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.ttl> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ],
     [ a adms:AssetDistribution ;
-      dcterms:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML>,
-        <http://www.w3.org/ns/formats/data/RDF_XML> ;
-      dcterms:title "RDF/XML"@en ;
-      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.rdf> ;
-      dcat:mediaType <https://www.iana.org/assignments/media-types/application/rdf+xml> ] ;
+      dcterms:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+      dcterms:title "HTML"@en ;
+      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/> ;
+      dcat:mediaType "text/html"^^dcterms:IMT ] ;
   foaf:depiction <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/figures/mobilityDCAT-AP_uml-diagramm_240816.png> .
 
