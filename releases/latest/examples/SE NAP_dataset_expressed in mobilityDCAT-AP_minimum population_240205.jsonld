@@ -39,7 +39,7 @@
     ],
     "http://purl.org/dc/terms/rights": [
       {
-        "@id": "_:N126fdd5674bf47f1ad5f1ea0a633dd9d"
+        "@id": "_:Nd1d59e1c86d0497389f80d960d97ec9b"
       }
     ],
     "http://www.w3.org/ns/dcat#accessURL": [
@@ -49,12 +49,12 @@
     ],
     "https://w3id.org/mobilitydcat-ap#mobilityDataStandard": [
       {
-        "@id": "_:Ncd5511e2a7844b2db51bfa72a27aa215"
+        "@id": "_:N7bf0233f6fea48c2b5bce09246795d30"
       }
     ]
   },
   {
-    "@id": "_:N126fdd5674bf47f1ad5f1ea0a633dd9d",
+    "@id": "_:Nd1d59e1c86d0497389f80d960d97ec9b",
     "@type": [
       "http://purl.org/dc/terms/RightsStatement"
     ],
@@ -65,7 +65,7 @@
     ]
   },
   {
-    "@id": "_:Ncd5511e2a7844b2db51bfa72a27aa215",
+    "@id": "_:N7bf0233f6fea48c2b5bce09246795d30",
     "@type": [
       "https://w3id.org/mobilitydcat-ap#MobilityDataStandard"
     ],
@@ -77,18 +77,6 @@
     "http://www.w3.org/ns/dcat#version": [
       {
         "@value": "3.2"
-      }
-    ]
-  },
-  {
-    "@id": "https://www.trafikverket.se/",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Agent"
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@language": "sv",
-        "@value": "Trafikverket"
       }
     ]
   },
@@ -110,7 +98,7 @@
     ],
     "http://purl.org/dc/terms/spatial": [
       {
-        "@id": "_:N0965b1a022fb48388e7846e864c82b2c"
+        "@id": "_:N5fb1f70d0f91479eadd646665c33307e"
       }
     ],
     "http://purl.org/dc/terms/title": [
@@ -136,7 +124,7 @@
     ]
   },
   {
-    "@id": "_:N0965b1a022fb48388e7846e864c82b2c",
+    "@id": "_:N5fb1f70d0f91479eadd646665c33307e",
     "@type": [
       "http://purl.org/dc/terms/Location"
     ],
@@ -191,7 +179,7 @@
     ],
     "http://purl.org/dc/terms/spatial": [
       {
-        "@id": "_:N27fdfdad12264ee091ddfa976fc36158"
+        "@id": "_:Na9195527520c4a7dbb4370856d73a954"
       }
     ],
     "http://purl.org/dc/terms/title": [
@@ -215,13 +203,25 @@
     ]
   },
   {
-    "@id": "_:N27fdfdad12264ee091ddfa976fc36158",
+    "@id": "_:Na9195527520c4a7dbb4370856d73a954",
     "@type": [
       "http://purl.org/dc/terms/Location"
     ],
     "http://purl.org/dc/terms/identifier": [
       {
         "@id": "http://publications.europa.eu/resource/authority/country/SWE"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.trafikverket.se/",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "sv",
+        "@value": "Trafikverket"
       }
     ]
   }

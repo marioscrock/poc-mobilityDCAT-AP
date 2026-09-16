@@ -845,11 +845,11 @@ skos:Concept skos:scopeNote "A category of a dataset, i.e. a specific subject, t
   adms:status <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> ;
   adms:versionNotes "Version 3.0.0 extends DCAT-AP v3.0.0, adds DatasetSeries, aligns with geoDCAT-AP v3.0.0, and includes new properties for Dataset and Distribution."@en ;
   dcat:distribution [ a adms:AssetDistribution ;
-      dcterms:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML>,
-        <http://www.w3.org/ns/formats/data/RDF_XML> ;
-      dcterms:title "RDF/XML"@en ;
-      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.rdf> ;
-      dcat:mediaType <https://www.iana.org/assignments/media-types/application/rdf+xml> ],
+      dcterms:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD>,
+        <http://www.w3.org/ns/formats/data/JSON-LD> ;
+      dcterms:title "JSON-LD"@en ;
+      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.jsonld> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/application/ld+json> ],
     [ a adms:AssetDistribution ;
       dcterms:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
         <http://www.w3.org/ns/formats/data/Turtle> ;
@@ -857,15 +857,15 @@ skos:Concept skos:scopeNote "A category of a dataset, i.e. a specific subject, t
       dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.ttl> ;
       dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ],
     [ a adms:AssetDistribution ;
+      dcterms:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML>,
+        <http://www.w3.org/ns/formats/data/RDF_XML> ;
+      dcterms:title "RDF/XML"@en ;
+      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.rdf> ;
+      dcat:mediaType <https://www.iana.org/assignments/media-types/application/rdf+xml> ],
+    [ a adms:AssetDistribution ;
       dcterms:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
       dcterms:title "HTML"@en ;
       dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/> ;
-      dcat:mediaType "text/html"^^dcterms:IMT ],
-    [ a adms:AssetDistribution ;
-      dcterms:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD>,
-        <http://www.w3.org/ns/formats/data/JSON-LD> ;
-      dcterms:title "JSON-LD"@en ;
-      dcat:downloadURL <https://w3id.org/mobilitydcat-ap/drafts/latest/mobilitydcat-ap.jsonld> ;
-      dcat:mediaType <https://www.iana.org/assignments/media-types/application/ld+json> ] ;
+      dcat:mediaType "text/html"^^dcterms:IMT ] ;
   foaf:depiction <https://mobilitydcat-ap.github.io/mobilityDCAT-AP/drafts/latest/figures/mobilityDCAT-AP_uml-diagramm_240816.png> .
 
